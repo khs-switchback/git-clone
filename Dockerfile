@@ -6,4 +6,3 @@ ENV REVISION null
 ADD *.sh /usr/local/bin/
 
 CMD /bin/bash /usr/local/bin/run.sh $REPO $BRANCH $REVISION
-
