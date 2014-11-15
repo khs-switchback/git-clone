@@ -1,8 +1,9 @@
 FROM switchback/git-debian
 
-ENV REVISION null
-
 # add script to run
 ADD *.sh /usr/local/bin/
 
-CMD /bin/bash /usr/local/bin/run.sh $REPO $BRANCH $REVISION
+RUN ls /usr/local/bin
+
+CMD /bin/bash /usr/local/bin/setup.sh && \
+    /bin/bash /usr/local/bin/clone.sh $REPO $BRANCH
